@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+            <label>id</label>
+            <input type="text" id="txtId" name="memberid" runat="server" />
+
+        </div>
+        <div>
+            <label>first_name</label>
+            <input type="text" id="txtFirstname" runat="server" />
+
+        </div>
+        <div>
+            <label>last_name</label>
+            <input type="text" id="txtlastname" runat="server" />
+
+        </div>
+        <div>
+            <label>dob</label>
+            <input type="text" id="txtdob" runat="server" />
+
+        </div>
+        <div>
+            <label>country</label>
+            <input type="text" id="txtcountry" maxlength="2" runat="server" />
+
+        </div>
+        <div>
+            
+            <button  onClick="showAlert()"type="submit" id="btnSubmit"  value="Submit" runat="server">Submit</button>
+            <script type="text/javascript">
+                function showAlert() {
+                    
+                    if (document.getElementsByName("memberId").length == 6) {
+                        Response.Write("alert('ID accepted!');");
+                    }
+                    else {
+						Response.Write("alert('ID format error!');");
+                        
+					}
+				}
+            </script>
+        </div>
+    </form>
+</body>
+
+
+
+</html>
